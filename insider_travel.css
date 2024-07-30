@@ -1,5 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 h1 {
-    font-size: 50pt;
+    font-size: 70pt;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+h2 {
+    font-Size: 50pt;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+
+h3 {
+    font-Size: 12pt;
+    text-align: center;
+    margin: 0;
+}
+
+h4 {
+    font-size: 30pt;
+    margin: 0;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+img {
+    height: 600px;
+    width: 900px;
+    margin-bottom: 50px;
+}
+
+footer {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+i {
+    font-size: 36pt;
+    color: #000000;
+    padding: 6px;
+    text-align: center;
+}
+
+a {
     display: flex;
     justify-content: center;
 }
