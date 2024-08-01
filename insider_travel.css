@@ -98,6 +98,10 @@ a {
     justify-content: center;
 }
 
+.pink_color {
+    color: #e739f7;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -181,6 +185,7 @@ a {
 
     h5 {
         font-size: 10pt;
+        margin-top: 0.5rem;
     }
 
     i {
@@ -190,13 +195,16 @@ a {
     .stats {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 9rem;
+        justify-content: start;
+        align-items: start;
+        width: 11rem;
     }
 
     .inner_stats {
-        padding: 0.4rem;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+
     }
 
     .container {
@@ -211,7 +219,7 @@ a {
     .destination_container {
         display: flex;
         justify-content: center;
-        width: 44%;
+        width: 43%;
         height: 50vh;
         margin-bottom: 2rem;
     }
