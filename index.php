@@ -31,47 +31,61 @@ $results = $query->fetchAll();
 </header>
 <div class="slogan"><h2 class='pink_color'>Know</h2><h2>before</h2></div>
 <div class="slogan"><h2>you</h2><h2 class='pink_color'>go</h2><h2>!</h2></div>
-    <div class='container'>
-            <?php
-            foreach($results as $destination)
-            {
-                echo "<div class='destination_container'>"
-                        ."<div class='location' style='background-image: url({$destination['image']})'>"
-                            ."<div class='destination_name'>".$destination['location']."</div>"
-                        ."</div>"
-                        ."<div class='stats'>"
-                            ."<div class = 'inner_stats'>"
-                                ."<div>"
-                                    ."<h3>Pint of beer:</h3>"
-                                ."</div>"
-                                ."<div class = 'stats_values'>"
-                                    ."<img class ='stats_icon' src='images/beer.png'>"
-                                    ."<h5>"."£".$destination['average_beer_price']."</h5>"
-                                ."</div>"
+<div class='container'>
+        <?php
+        foreach($results as $destination)
+        {
+            echo "<div class='destination_container'>"
+                    ."<div class='location' style='background-image: url({$destination['image']})'>"
+                        ."<div class='destination_name'>".$destination['location']."</div>"
+                    ."</div>"
+                    ."<div class='stats'>"
+                        ."<div class = 'inner_stats'>"
+                            ."<div>"
+                                ."<h3>Pint of beer:</h3>"
                             ."</div>"
-                            ."<div class = 'inner_stats'>"
-                                ."<div>"
-                                    ."<h3>Must try:</h3>"
-                                ."</div>"
-                                ."<div class = 'stats_values'>"
-                                    ."<img class ='stats_icon' src='images/meal.png'>"
-                                    ."<h5>".$destination['top_dish']."</h5>"
-                                ."</div>"
-                            ."</div>"
-                            ."<div class = 'inner_stats'>"
-                                ."<div>"
-                                    ."<h3>Must see:</h3>"
-                                ."</div>"
-                                ."<div class = 'stats_values'>"
-                                    ."<img class ='stats_icon' src='images/sightseeing.png'>"
-                                    ."<h5>".$destination['top_attraction']."</h5>"
-                                ."</div>"
+                            ."<div class = 'stats_values'>"
+                                ."<img class ='stats_icon' src='images/beer.png'>"
+                                ."<h5>"."£".$destination['average_beer_price']."</h5>"
                             ."</div>"
                         ."</div>"
-                    ."</div>";
-            }
-            ?>
+                        ."<div class = 'inner_stats'>"
+                            ."<div>"
+                                ."<h3>Must try:</h3>"
+                            ."</div>"
+                            ."<div class = 'stats_values'>"
+                                ."<img class ='stats_icon' src='images/meal.png'>"
+                                ."<h5>".$destination['top_dish']."</h5>"
+                            ."</div>"
+                        ."</div>"
+                        ."<div class = 'inner_stats'>"
+                            ."<div>"
+                                ."<h3>Must see:</h3>"
+                            ."</div>"
+                            ."<div class = 'stats_values'>"
+                                ."<img class ='stats_icon' src='images/sightseeing.png'>"
+                                ."<h5>".$destination['top_attraction']."</h5>"
+                            ."</div>"
+                        ."</div>"
+                    ."</div>"
+                ."</div>";
+        }
+        ?>
+</div>
+<div class="user_input">
+    <div class="form_header">
+        <h1 class="add_destination">Add a</h1>
+        <h1 class="add_destination">destination</h1>
     </div>
+    <form action="add_location.php" method="POST">
+        <input required type='text' name='location' placeholder="Location">
+        <input required type='url' name='url' placeholder="Image url">
+        <input required type='text' name='dish' placeholder="Favourite dish">
+        <input required type='text' name='attraction' placeholder="Favourite attraction">
+        <input required type='text' name='beer' placeholder="Cost of Pint of beer">
+        <input class=button type="submit">
+    </form>
+</div>
 <footer>
     <div>
         <h4>Contact Us</h4>
@@ -82,7 +96,6 @@ $results = $query->fetchAll();
 </footer>
 </body>
 </html>
-
 
 
 
